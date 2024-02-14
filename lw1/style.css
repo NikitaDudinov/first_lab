@@ -1,4 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
 .wrapper {
     max-width: 960px;
     margin: 0 auto;
+}
+.Header_Text {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+    padding-top: 20px;
+    padding-bottom: 28px;
+}
+.Navigation ul {
+    display: flex;
+}
+.Navigation ul li {
+    padding-right: 41px;
+    font-size: 12px;
+}
+
+.logo {
+    font-size: 26px;
 }
