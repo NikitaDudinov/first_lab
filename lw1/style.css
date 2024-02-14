@@ -10,6 +10,7 @@
 .wrapper {
     max-width: 960px;
     margin: 0 auto;
+    padding-bottom: 89px;
 }
 .Header_Text {
     display: flex;
@@ -28,4 +29,30 @@
 
 .logo {
     font-size: 26px;
+}
+.headline {
+    width: 940px;
+    height: 160px;
+}
+.name {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.description {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-weight: 400;
+    font-size: 17px;
+    padding-top: 20px;
+}
+.image {
+    padding-top: 38px;
+    width: 100%;
+    height: 534px;
+    padding-bottom: 140px;
 }
