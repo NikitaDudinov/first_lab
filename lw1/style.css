@@ -13,17 +13,17 @@
     margin: 0 auto;
     padding-bottom: 89px;
 }
-.Header_Text {
+.header_text {
     display: flex;
     justify-content: space-between; 
     align-items: center;  
     padding-top: 20px;
     padding-bottom: 28px;
 }
-.Navigation ul {
+.navigation ul {
     display: flex;
 }
-.Navigation ul li {
+.navigation ul li {
     padding-right: 41px;
     font-size: 12px;
     line-height: 20px;
@@ -99,11 +99,11 @@
     color: #FFF;
 }
 
-.Navigation_end ul {
+.navigation_end ul {
     display: flex;
 
 }
-.Navigation_end ul li a{
+.navigation_end ul li a{
     padding-right: 20px;
     font-weight: 400;  
     font-size: 11px;
