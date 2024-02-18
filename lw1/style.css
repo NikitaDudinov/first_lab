@@ -28,27 +28,26 @@
     font-size: 12px;
     line-height: 20px;
 }
-
 .logo {
+    font-weight: 400;
     font-size: 26px;
+    line-height: 26px;
 }
 .headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     height: 160px;
 }
 .name {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
     font-weight: 400;
     font-size: 50px;
     line-height: 51px;
 }
 
 .description {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
     font-weight: 400;
     font-size: 17px;
     line-height: 20px;
@@ -59,6 +58,7 @@
     width: 100%;
     height: 534px;
 }
+
 .article {
     margin: 0 auto 135px auto;
     max-height: 1430px;
@@ -76,18 +76,19 @@
 }
 .menu {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    background-image: url(../lw1/Background.jpg);
-    width: 100%;
+    background-image: url(../lw1/images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 90px ;
     height: 90px;
-
+    width: 100%;
 }
 
 .selection_panel {
     display: flex;
     justify-content: space-between; 
-    align-items: center; 
+    align-items: center;  
     width: 960px;
     height: 34px;
 }
