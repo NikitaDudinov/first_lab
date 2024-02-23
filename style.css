@@ -1,0 +1,121 @@
+ *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #2e2e2e;
+    font-family: "Oxygen", serif;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto 89px auto;
+}
+
+.header_text {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+    padding-top: 20px;
+    padding-bottom: 28px;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.navigation ul li {  
+    padding-right: 41px;
+    text-transform: uppercase;
+}
+
+.navigation ul li a {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+    text-align: left;
+}
+
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 160px;
+}
+
+.name {
+    font-family: "Lora", serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.description {
+    padding-top: 20px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+
+.image {
+    margin: 38px auto 140px auto;
+    width: 100%;
+    height: 534px;
+}
+
+.wrapper article {
+    margin: 0 auto 135px auto;
+}
+
+.article_text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/Background.jpg) rgba(35, 47, 56, 0.6);
+    background-blend-mode: multiply;
+    background-size: 100% 90px ;
+    height: 90px;
+    width: 100%;
+}
+
+.selection_panel {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+    width: 960px;
+    height: 34px;
+}
+
+.navigation_end ul {
+    display: flex;
+
+}
+
+.navigation_end ul li a{
+    text-transform: uppercase;
+    padding-right: 20px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
