@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Oxygen", serif;
+    color: #2e2e2e;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    max-width: 100%;
+    height: 500px;
+    background-image: url(../images/Sandy_mountains.jpg);
+    background-size: 100% 100%;
+}
+
+.header-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+    padding-top: 17px;
+    padding-bottom: 110px;
+}
+
+.navigation ul{
+    display: flex;
+}
+
+.navigation li a{
+    padding-right: 41px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.name {
+    font-family: "Lora";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 51px;
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.description {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.63);
+    padding-bottom: 31px;
+}
+
+.button {
+    height: 44px;
+    width: 167px;
+    border-radius: 3px;
+    background: rgba(221, 120, 63, 1);
+    color: white;
+}
+
+main {
+    background: rgba(247, 247, 247, 1);
+}
+
+.choise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 65px;
+    background: white;
+}
+
+.select_bar {
+    width: 960px;
+}
+
+.select_bar ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.select_bar li a{
+    font-family: "Lora";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(118, 128, 136, 1);
+}
+
+.featured_posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.featured_posts_name {
+    padding-top: 60px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.line {
+    margin: 16px auto;
+    width: 188px;
+	border-top: 1px solid rgba(222, 222, 222, 1);
+}
+
+.posts {
+    margin: 0 auto;
+    width: 960px;
+    height: 294px;
+}
+.choise_post {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    height: 280px;
+    width: 460px;
+    background-image: url(../images/Northern_lights.jpg);
+    background-size: 100% 100%;
+}
+
+.name_card {
+    padding: 157px 0 6px 20px;
+    font-family: "Lora";
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 30px;
+    color: white;
+}
+
+.discription_card {
+    padding: 0 0 12px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.author_card {
+    display: flex;
+}
+
+.image_author {
+    padding-left: 20px;
+} 
+
+.name_author {
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 35px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.date {
+    padding-left: 215px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 35px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.name_most_recent {
+    margin-top: 60px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+}
+.most_recent {
+    display: flex;
+    justify-content: center;  
+    height: 632px;
+
+}
+.choise_most_recent {
+    max-width: 960px;
+    margin-bottom: 89px; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.ticket {
+    width: 296px;
+    height: 291px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.image_card {
+    width: 100%;
+    height: 150px;
+}
+
+.most_recent_name_card {
+    padding-left: 13px;
+    padding-top: 14px;
+    font-family: "Lora";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.most_recent_discription {
+    padding-left: 13px;
+    padding-top: 6px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+    color: rgba(122, 122, 122, 1);
+}
+
+.most_recent_line {
+    margin-top: 33px;
+    width: 100%;
+	border-top: 1px solid rgba(222, 222, 222, 1); 
+}
+
+.most_recent_author {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.most_recent_image {
+    padding-left: 13px;
+}
+
+.most_recent_name {
+    padding-left: 10px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 35px;
+    color: rgba(153, 153, 153, 1);
+}
+
+.most_recent_date {
+    padding-left: 100px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 35px;
+    color: rgba(153, 153, 153, 1);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/Background.jpg) rgba(35, 47, 56, 0.6);
+    background-blend-mode: multiply;
+    background-size: 100% 90px ;
+    height: 90px;
+    width: 100%;
+}
+
+.header-text_end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 960px;
+}
+
+footer .navigation li a {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.6);
+}
