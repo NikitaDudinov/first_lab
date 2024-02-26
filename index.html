@@ -14,10 +14,10 @@
     <header>
         <div class="wrapper">
             <div class="header-text">
-                <div class="logo">
+                <div class="header-text__logo">
                     <img src="../images/Escape_end.svg" alt="Escape.">
                 </div>
-                <nav class="navigation">
+                <nav class="header-text__navigation">
                     <ul>
                         <li>
                             <a href="#">home</a>
@@ -35,10 +35,10 @@
                 </nav>
             </div>
             <div class="headline">
-                <div class="name">
+                <div class="headline__name">
                     Let's do it together.
                 </div>
-                <div class="description">
+                <div class="headline__description">
                     We travel the world in search of stories. Come along for the ride.
                 </div>
             </div>
@@ -48,8 +48,8 @@
         </div>
     </header>
     <main>
-        <div class="choise">
-            <nav class="select_bar">
+        <div class="wrapper">
+            <nav class="select-bar">
                 <ul>
                     <li>
                         <a href="#">Nature</a>
@@ -72,210 +72,234 @@
                 </ul>
             </nav>
         </div> 
-        <div class="featured_posts">
-            <div class="featured_posts_name">
+        <div class="featured-posts">
+            <div class="featured-posts__headline">
                 Featured Posts
             </div>
-        </div>  
-        <hr class="line">  
-        <div class="posts">
-            <nav class="choise_post">
+            <hr class="line">  
+            <nav class="featured-posts__choice">
                 <a href="../the-road-ahead.html">
-                    <div class="card">
-                        <div class="name_card">
+                    <div class="featured-posts__post">
+                        <img class="featured-posts__background" src="../images/index/featered-posts/background1.jpg" alt="">
+                        <div class="featured-posts__note-photography">
+                            <div class="featured-posts__photography">
+                                photography
+                            </div>
+                        </div>
+                        <div class="featured-posts__name">
                             The Road Ahead
                         </div>
-                        <div class="discription_card">
+                        <div class="featured-posts__discription">
                             The road ahead might be paved - it might not be.
                         </div>
-                        <div class="author_card">
-                            <img class="image_author" src="../images/author1.svg" alt="author_post">
-                            <div class="name_author">
+                        <div class="featured-posts__author">
+                            <img class="featured-posts__author-image" src="../images/index/first_author.jpg" alt="author_post">
+                            <div class="featured-posts__author-name">
                                 Mat Vogels
                             </div>
-                            <div class="date">
+                            <div class="featured-posts__date">
+                                September 25, 2015
+                            </div> 
+                        </div>      
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="featured-posts__post">
+                        <img class="featured-posts__background" src="../images/index/featered-posts/background2.jpg" alt="">
+                        <div class="featured-posts__note-adventure">
+                            <div class="featured-posts__adventure">
+                                adventure
+                            </div>
+                        </div>
+                        <div class="featured-posts__name">
+                            From Top Down
+                        </div>
+                        <div class="featured-posts__discription">
+                            Once a year, go someplace you’ve never been before.
+                        </div>
+                        <div class="featured-posts__author">
+                            <img class="featured-posts__author-image" src="../images/index/second_author.jpg" alt="author_post">
+                            <div class="featured-posts__author-name">
+                                William Wong
+                            </div>
+                            <div class="featured-posts__date">
                                 September 25, 2015
                             </div>
                         </div>           
                     </div>
                 </a>
+            </nav>        
+        </div>  
+        <div class="most-recent">
+            <div class="most-recent__headline">
+                Most Recent  
+            </div>
+            <hr class="line"> 
+            <nav class="most-recent__choice">
                 <a href="#">
-                    <div class="card">
-                        <div class="name_card">
-                            The Road Ahead
+                    <div class="most-recent__post">
+                        <img class='most-recent__image' src="../images/index/most-recent/image1.jpg" alt="">
+                        <div class="most-recent__main">
+                            <div class="most-recent__name">
+                                Still Standing Tall
+                            </div>
+                            <div class="most-recent__discription">
+                                Life begins at the end of your comfort zone.
+                            </div>
                         </div>
-                        <div class="discription_card">
-                            The road ahead might be paved - it might not be.
+                        <hr class="most-recent__line"> 
+                        <div class="most-recent__author">
+                            <img class='most-recent__image-author' src="../images/index/second_author.jpg" alt="">
+                            <div class="most-recent__name-author">
+                                William Wong
+                            </div>
+                            <div class="most-recent__date">
+                                9/25/2015
+                            </div>
+                        </div> 
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="most-recent__post">
+                        <img class='most-recent__image' src="../images/index/most-recent/image2.jpg" alt="">
+                        <div class="most-recent__main">
+                            <div class="most-recent__name">
+                                Sunny Side Up
+                            </div>
+                            <div class="most-recent__discription">
+                                No place is ever as bad as they tell you it’s going to be.
+                            </div>
                         </div>
-                        <div class="author_card">
-                            <img class="image_author" src="../images/author1.svg" alt="author_post">
-                            <div class="name_author">
+                        <hr class="most-recent__line"> 
+                        <div class="most-recent__author">
+                            <img class='most-recent__image-author' src="../images/index/first_author.jpg" alt="">
+                            <div class="most-recent__name-author">
                                 Mat Vogels
                             </div>
-                            <div class="date">
-                                September 25, 2015
-                            </div>
-                        </div>           
-                    </div>
-                </a>
-            </nav>
-        </div>
-        <div class="name_most_recent">
-            Most Recent  
-        </div>
-        <hr class="line"> 
-        <div class="most_recent">
-            <nav class="choise_most_recent">
-                <a href="#">
-                    <div class="ticket">
-                        <img class='image_card' src="../images/first_card.jpg" alt="">
-                        <div class="most_recent_name_card">
-                            Still Standing Tall
-                        </div>
-                        <div class="most_recent_discription">
-                            Life begins at the end of your comfort zone.
-                        </div>
-                        <hr class="most_recent_line"> 
-                        <div class="most_recent_author">
-                            <img class='most_recent_image' src="../images/author_most_recent.svg" alt="">
-                            <div class="most_recent_name">
-                                William Wong
-                            </div>
-                            <div class="most_recent_date">
+                            <div class="most-recent__date">
                                 9/25/2015
                             </div>
                         </div> 
                     </div>
                 </a>
                 <a href="#">
-                    <div class="ticket">
-                        <img class='image_card' src="../images/first_card.jpg" alt="">
-                        <div class="most_recent_name_card">
-                            Still Standing Tall
-                        </div>
-                        <div class="most_recent_discription">
-                            Life begins at the end of your comfort zone.
-                        </div>
-                        <hr class="most_recent_line"> 
-                        <div class="most_recent_author">
-                            <img class='most_recent_image' src="../images/author_most_recent.svg" alt="">
-                            <div class="most_recent_name">
-                                William Wong
+                    <div class="most-recent__post">
+                        <img class='most-recent__image' src="../images/index/most-recent/image3.jpg" alt="">
+                        <div class="most-recent__main">
+                            <div class="most-recent__name">
+                                Water Falls
                             </div>
-                            <div class="most_recent_date">
+                            <div class="most-recent__discription">
+                                We travel not to escape life, but for life not to escape us.
+                            </div>
+                        </div>
+                        <hr class="most-recent__line"> 
+                        <div class="most-recent__author">
+                            <img class='most-recent__image-author' src="../images/index/first_author.jpg" alt="">
+                            <div class="most-recent__name-author">
+                                Mat Vogels
+                            </div>
+                            <div class="most-recent__date">
                                 9/25/2015
                             </div>
                         </div> 
                     </div>
                 </a>
                 <a href="#">
-                    <div class="ticket">
-                        <img class='image_card' src="../images/first_card.jpg" alt="">
-                        <div class="most_recent_name_card">
-                            Still Standing Tall
+                    <div class="most-recent__post">
+                        <img class='most-recent__image' src="../images/index/most-recent/image4.jpg" alt="">
+                        <div class="most-recent__main">
+                            <div class="most-recent__name">
+                                Through the Mist
+                            </div>
+                            <div class="most-recent__discription">
+                                Travel makes you see what a tiny place you occupy in the world.
+                            </div>
                         </div>
-                        <div class="most_recent_discription">
-                            Life begins at the end of your comfort zone.
-                        </div>
-                        <hr class="most_recent_line"> 
-                        <div class="most_recent_author">
-                            <img class='most_recent_image' src="../images/author_most_recent.svg" alt="">
-                            <div class="most_recent_name">
+                        <hr class="most-recent__line"> 
+                        <div class="most-recent__author">
+                            <img class='most-recent__image-author' src="../images/index/second_author.jpg" alt="">
+                            <div class="most-recent__name-author">
                                 William Wong
                             </div>
-                            <div class="most_recent_date">
+                            <div class="most-recent__date">
                                 9/25/2015
                             </div>
                         </div> 
                     </div>
                 </a>
                 <a href="#">
-                    <div class="ticket">
-                        <img class='image_card' src="../images/first_card.jpg" alt="">
-                        <div class="most_recent_name_card">
-                            Still Standing Tall
-                        </div>
-                        <div class="most_recent_discription">
-                            Life begins at the end of your comfort zone.
-                        </div>
-                        <hr class="most_recent_line"> 
-                        <div class="most_recent_author">
-                            <img class='most_recent_image' src="../images/author_most_recent.svg" alt="">
-                            <div class="most_recent_name">
-                                William Wong
+                    <div class="most-recent__post">
+                        <img class='most-recent__image' src="../images/index/most-recent/image5.jpg" alt="">
+                        <div class="most-recent__main">
+                            <div class="most-recent__name">
+                                Awaken Early
                             </div>
-                            <div class="most_recent_date">
+                            <div class="most-recent__discription">
+                                Not all those who wander are lost.
+                            </div>
+                        </div>
+                        <hr class="most-recent__line"> 
+                        <div class="most-recent__author">
+                            <img class='most-recent__image-author' src="../images/index/first_author.jpg" alt="">
+                            <div class="most-recent__name-author">
+                                Mat Vogels
+                            </div>
+                            <div class="most-recent__date">
                                 9/25/2015
                             </div>
                         </div> 
                     </div>
                 </a>
                 <a href="#">
-                    <div class="ticket">
-                        <img class='image_card' src="../images/first_card.jpg" alt="">
-                        <div class="most_recent_name_card">
-                            Still Standing Tall
-                        </div>
-                        <div class="most_recent_discription">
-                            Life begins at the end of your comfort zone.
-                        </div>
-                        <hr class="most_recent_line"> 
-                        <div class="most_recent_author">
-                            <img class='most_recent_image' src="../images/author_most_recent.svg" alt="">
-                            <div class="most_recent_name">
-                                William Wong
+                    <div class="most-recent__post">
+                        <img class='most-recent__image' src="../images/index/most-recent/image6.jpg" alt="">
+                        <div class="most-recent__main">
+                            <div class="most-recent__name">
+                                Try it Always
                             </div>
-                            <div class="most_recent_date">
-                                9/25/2015
+                            <div class="most-recent__discription">
+                                The world is a book, and those who do not travel read only one page.
                             </div>
-                        </div> 
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="ticket">
-                        <img class='image_card' src="../images/first_card.jpg" alt="">
-                        <div class="most_recent_name_card">
-                            Still Standing Tall
                         </div>
-                        <div class="most_recent_discription">
-                            Life begins at the end of your comfort zone.
-                        </div>
-                        <hr class="most_recent_line"> 
-                        <div class="most_recent_author">
-                            <img class='most_recent_image' src="../images/author_most_recent.svg" alt="">
-                            <div class="most_recent_name">
-                                William Wong
+                        <hr class="most-recent__line"> 
+                        <div class="most-recent__author">
+                            <img class='most-recent__image-author' src="../images/index/first_author.jpg" alt="">
+                            <div class="most-recent__name-author">
+                                Mat Vogels
                             </div>
-                            <div class="most_recent_date">
+                            <div class="most-recent__date">
                                 9/25/2015
                             </div>
                         </div> 
                     </div>
                 </a>
             </nav>
-        </div>
+        </div>   
     </main>
     <footer>
-        <div class="header-text_end">
-            <div class="logo">
-                <img src="../images/Escape_end.svg" alt="Escape.">
+        <div class="wrapper">
+            <div class="header-text">
+                <div class="header-text__logo">
+                    <img src="../images/Escape_end.svg" alt="Escape.">
+                </div>
+                <nav class="header-text__navigation">
+                    <ul>
+                        <li>
+                            <a href="#">home</a>
+                        </li>
+                        <li>
+                            <a href="#">categories</a>
+                        </li>
+                        <li>
+                            <a href="#">about</a>
+                        </li>
+                        <li>
+                            <a href="#">contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="navigation">
-                <ul>
-                    <li>
-                        <a href="#">home</a>
-                    </li>
-                    <li>
-                        <a href="#">categories</a>
-                    </li>                       
-                    <li>
-                        <a href="#">about</a>
-                    </li>
-                    <li>
-                        <a href="#">contact</a>
-                    </li>
-                </ul>
-            </nav>
         </div>
     </footer>
 </body>

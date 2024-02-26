@@ -4,8 +4,8 @@
     border: 0;
     list-style: none;
     text-decoration: none;
-    font-family: "Oxygen", serif;
     color: #2e2e2e;
+    font-family: "Oxygen", serif;
 }
 
 .wrapper {
@@ -15,7 +15,7 @@
     align-items: center;
     max-width: 100%;
     height: 500px;
-    background-image: url(../images/Sandy_mountains.jpg);
+    background-image: url(../images/index/Sandy_mountains.jpg);
     background-size: 100% 100%;
 }
 
@@ -28,17 +28,17 @@
     padding-bottom: 110px;
 }
 
-.navigation ul{
+.header-text__navigation ul{
     display: flex;
 }
 
-.navigation li a{
+.header-text__navigation li a{
     padding-right: 41px;
     text-transform: uppercase;
     color: white;
 }
 
-.name {
+.headline__name {
     font-family: "Lora";
     font-size: 50px;
     font-weight: 400;
@@ -48,7 +48,7 @@
     padding-bottom: 20px;
 }
 
-.description {
+.headline__description {
     font-size: 17px;
     font-weight: 400;
     line-height: 20px;
@@ -69,7 +69,7 @@ main {
     background: rgba(247, 247, 247, 1);
 }
 
-.choise {
+main .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,16 +78,16 @@ main {
     background: white;
 }
 
-.select_bar {
+.select-bar {
     width: 960px;
 }
 
-.select_bar ul {
+.select-bar ul {
     display: flex;
     justify-content: space-around;
 }
 
-.select_bar li a{
+.select-bar li a{
     font-family: "Lora";
     font-size: 14px;
     font-weight: 400;
@@ -95,17 +95,12 @@ main {
     color: rgba(118, 128, 136, 1);
 }
 
-.featured_posts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.featured_posts_name {
-    padding-top: 60px;
+.featured-posts__headline {
+    margin-top: 60px;
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
+    text-align: center;
 }
 
 .line {
@@ -114,99 +109,169 @@ main {
 	border-top: 1px solid rgba(222, 222, 222, 1);
 }
 
-.posts {
+
+.featured-posts__choice {
     margin: 0 auto;
     width: 960px;
     height: 294px;
-}
-.choise_post {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.card {
+
+
+
+.featured-posts__post {
+    position: relative;
     height: 280px;
     width: 460px;
-    background-image: url(../images/Northern_lights.jpg);
-    background-size: 100% 100%;
 }
 
-.name_card {
-    padding: 157px 0 6px 20px;
+
+.featured-posts__background{
+    height: 280px;
+    width: 460px;
+}
+
+.featured-posts__note-adventure {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px;
+    height: 26px;
+    border-radius: 2px;
+    background: rgba(221, 120, 63, 1);
+}
+
+.featured-posts__adventure {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+}
+
+.featured-posts__note-photography {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 26px;
+    border-radius: 2px;
+    background: rgba(168, 114, 183, 1);
+}
+
+.featured-posts__photography {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+}
+
+.featured-posts__name {
+    position: absolute;
+    left: 20px;
+    top: 157px;
     font-family: "Lora";
     font-size: 27px;
     font-weight: 400;
     line-height: 30px;
-    color: white;
+    color: white;    
 }
 
-.discription_card {
-    padding: 0 0 12px 20px;
+.featured-posts__discription {
+    position: absolute;
+    left: 20px;
+    top: 193px;
     font-size: 14px;
     font-weight: 400;
     line-height: 25px;
     color: rgba(255, 255, 255, 0.7);
 }
 
-.author_card {
+.featured-posts__author {
+    position: absolute;
+    top: 230px;
     display: flex;
+    align-items: center;
+    width: 420px;
+    height: 35px;
 }
 
-.image_author {
-    padding-left: 20px;
-} 
+.featured-posts__author-image {
+    position: absolute;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    border-radius: 60px;
+}
 
-.name_author {
-    padding-left: 10px;
+.featured-posts__author-name {
+    position: absolute;
+    left: 56px;
     font-size: 12px;
     font-weight: 400;
     line-height: 35px;
     color: rgba(255, 255, 255, 0.7);
 }
 
-.date {
-    padding-left: 215px;
+.featured-posts__date {
+    position: absolute;
+    left: 312px;
     font-size: 12px;
     font-weight: 400;
     line-height: 35px;
     color: rgba(255, 255, 255, 0.7);
 }
 
-.name_most_recent {
+.most-recent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.most-recent__headline {
     margin-top: 60px;
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
     text-align: center;
 }
-.most_recent {
-    display: flex;
-    justify-content: center;  
-    height: 632px;
 
-}
-.choise_most_recent {
+.most-recent__choice {
     max-width: 960px;
-    margin-bottom: 89px; 
+    padding-bottom: 64px; 
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.ticket {
+.most-recent__post {
     width: 296px;
     height: 291px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     background-color: white;
 }
 
-.image_card {
+.most-recent__image {
     width: 100%;
     height: 150px;
 }
 
-.most_recent_name_card {
+.most-recent__main {
+    width: 100%;
+    height: 93px;
+}
+
+.most-recent__name {
     padding-left: 13px;
     padding-top: 14px;
     font-family: "Lora";
@@ -215,8 +280,9 @@ main {
     line-height: 21px;
 }
 
-.most_recent_discription {
+.most-recent__discription {
     padding-left: 13px;
+    padding-right: 13px;
     padding-top: 6px;
     font-size: 13px;
     font-weight: 400;
@@ -224,40 +290,47 @@ main {
     color: rgba(122, 122, 122, 1);
 }
 
-.most_recent_line {
-    margin-top: 33px;
+.most-recent__line {
     width: 100%;
 	border-top: 1px solid rgba(222, 222, 222, 1); 
 }
 
-.most_recent_author {
+.most-recent__author {
+    position: relative;
     width: 100%;
     height: 48px;
     display: flex;
     align-items: center;
 }
 
-.most_recent_image {
-    padding-left: 13px;
+.most-recent__image-author {
+    position: absolute;
+    left: 13px;
+    width: 26px;
+    height: 26px;
+    border-radius: 60px;
+
 }
 
-.most_recent_name {
-    padding-left: 10px;
+.most-recent__name-author {
+    position: absolute;
+    left: 49px;
     font-size: 11px;
     font-weight: 400;
     line-height: 35px;
     color: rgba(153, 153, 153, 1);
 }
 
-.most_recent_date {
-    padding-left: 100px;
+.most-recent__date {
+    position: absolute;
+    left: 225px;
     font-size: 12px;
     font-weight: 400;
     line-height: 35px;
     color: rgba(153, 153, 153, 1);
 }
 
-footer {
+footer .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,16 +341,27 @@ footer {
     width: 100%;
 }
 
-.header-text_end {
+footer .header-text {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 0px;
     width: 960px;
+    height: 100%;
 }
 
-footer .navigation li a {
+footer .header-text__navigation ul {
+    display: flex;
+
+}
+
+footer .header-text__navigation ul li a{
+    text-transform: uppercase;
+    padding-right: 20px;
     font-size: 11px;
     font-weight: 400;
     line-height: 26px;
+    letter-spacing: 1px;
+    text-align: right;
     color: rgba(255, 255, 255, 0.6);
 }
