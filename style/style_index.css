@@ -1,220 +1,192 @@
 * {
+    border: 0;
     margin: 0;
     padding: 0;
-    border: 0;
     list-style: none;
     text-decoration: none;
     color: #2e2e2e;
     font-family: "Oxygen", serif;
 }
-
-.wrapper {
+.header {
+    background: no-repeat url(../images/index/Sandy_mountains.jpg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: start;
     align-items: center;
-    width: 100%;
-    background-image: url(../images/index/Sandy_mountains.jpg);
-    background-size: 100% 100%;
+    padding: 17px 0 110px;
 }
-
-.block {
-    width: 100%;
-    max-width: 940px;
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 17px;
-    padding-bottom: 110px;
+    max-width: 940px;
+    width: 100%;
 }
 
-.block__navigation ul{
+.navigaton__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.block__navigation li a{
-    padding-right: 41px;
-    text-transform: uppercase;
+.navigation__link {
+    display: block;
+    padding: 10px 20px;
     color: white;
+    font: 400 12px/20px "Oxygen" serif;
+    text-transform: uppercase;
 }
 
-.headline__name {
-    font-family: "Lora";
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 51px;
+.header__title {
+    font: 400 50px/51px "Lora";
     text-align: center;
     color: white;
-    padding-bottom: 20px;
+    margin: 110px auto 20px auto;
 }
 
-.headline__description {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 20px;
+.header__subtitle {
+    font: 400 17px/20px "Oxygen";
     text-align: center;
     color: rgba(255, 255, 255, 0.63);
-    padding-bottom: 31px;
+    margin-bottom: 31px;
 }
 
-.wrapper__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 157px;
-    height: 44px;
-    width: 167px;
-    border-radius: 3px;
+.header__last-posts-link {
+    font: 400 13px/20px "Oxygen";
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
     background: rgba(221, 120, 63, 1);
-
-
+    padding: 12px 31px;
+    border-radius: 3px;
 }
-
-.wrapper__button p{
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 20px;
-    color: white;
-}
-
-main {
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 89px;
     background: rgba(247, 247, 247, 1);
 }
-
-main .wrapper {
+.wrapper {
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 1);
     display: flex;
     justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: 65px;
-    background: white;
-}
 
-.select-bar {
+}
+.choose-theme {
+    max-width: 960px;
     width: 100%;
-    max-width: 960px;
+    background-color: rgba(255, 255, 255, 1);
+    background-size: 100% 100%;
+
 }
 
-.select-bar ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-.select-bar li a{
-    font-family: "Lora";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: rgba(118, 128, 136, 1);
-}
-
-.featured-posts__headline {
-    margin-top: 60px;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 27px;
-    text-align: center;
-}
-
-.line {
-    margin: 16px auto;
-    width: 188px;
-	border-top: 1px solid rgba(222, 222, 222, 1);
-}
-
-
-.featured-posts__choice {
-    margin: 0 auto;
-    max-width: 960px;
+.choose-theme__list {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
+.choose-theme__link {
+    display: block;
+    text-align: center;
+    width: 139px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font: 400 14px/20px "Lora";
+}
 
+.list-posts {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;    
+}
 
-.featured-posts__post {
+.featured-posts {
+    padding-top: 60px;
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured-posts__title {
+    font: 400 20px/27px "Oxygen";
+    letter-spacing: 2px;
+}
+
+.line {
+    margin: 16px 0;
+    width: 188px;
+    height: 1px;
+    background-color: rgba(222, 222, 222, 1);
+}
+
+.featured-posts__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.featured-posts__item {
     position: relative;
     height: 280px;
     width: 460px;
-    padding-bottom: 7px;
+    padding: 7px 0 7px;
 }
 
-
-.featured-posts__background{
-    height: 280px;
-    width: 460px;
+.featured-posts__item-background {
+    size: 100% 100%;
 }
-
-.featured-posts__note-adventure {
+.featured-posts__item-note {
     position: absolute;
     left: 20px;
     top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 87px;
-    height: 26px;
+    display: block;
+    padding: 6px 9px 5px;
     border-radius: 2px;
-    background: rgba(221, 120, 63, 1);
-}
-
-.featured-posts__adventure {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 13px;
-    color: rgba(255, 255, 255, 1);
+    font: 400 12px/13px "Oxygen";
+    color: white;
     text-transform: uppercase;
 }
 
-.featured-posts__note-photography {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 108px;
-    height: 26px;
-    border-radius: 2px;
+.photography {
     background: rgba(168, 114, 183, 1);
 }
 
-.featured-posts__photography {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 13px;
-    color: rgba(255, 255, 255, 1);
-    text-transform: uppercase;
+.adventure {
+    background: rgba(221, 120, 63, 1);
 }
 
-.featured-posts__name {
+.featured-posts__item-title {
     position: absolute;
     left: 20px;
     top: 157px;
-    font-family: "Lora";
-    font-size: 27px;
-    font-weight: 400;
-    line-height: 30px;
-    color: white;    
+    font: 400 27px/30px "Lora";
+    color: white;
 }
 
-.featured-posts__discription {
+.featured-posts__item-subtitle {
     position: absolute;
     left: 20px;
     top: 193px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 25px;
+    font: 400 14px/25px "Oxygen";
     color: rgba(255, 255, 255, 0.7);
 }
 
-.featured-posts__author {
+.featured-posts__author{
     position: absolute;
     top: 230px;
     display: flex;
     align-items: center;
-    width: 420px;
+    width: 100%;
     height: 35px;
 }
 
@@ -229,83 +201,68 @@ main .wrapper {
 .featured-posts__author-name {
     position: absolute;
     left: 56px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 35px;
+    font: 400 12px/35px "Oxygen";
     color: rgba(255, 255, 255, 0.7);
 }
 
-.featured-posts__date {
+.featured-posts__author-date {
     position: absolute;
     left: 312px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 35px;
+    font: 400 12px/35px "Oxygen";
     color: rgba(255, 255, 255, 0.7);
 }
 
 .most-recent {
+    padding-top: 60px;
+    max-width: 960px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.most-recent__headline {
-    margin-top: 60px;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 27px;
-    text-align: center;
+
+.most-recent__title {
+    font: 400 20px/27px "Oxygen";
+    letter-spacing: 2px;
 }
 
-.most-recent__choice {
-    max-width: 960px;
-    padding-bottom: 64px; 
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.most-recent__post {
+.most-recent__item {
     width: 296px;
     height: 291px;
-    margin-bottom: 25px;
+    margin: 6px 0 19px;
     display: flex;
     flex-direction: column;
     background-color: white;
 }
 
-.most-recent__image {
+.most-recent__item-background{
     width: 100%;
     height: 150px;
 }
 
-.most-recent__main {
+.most-recent__item-body {
     width: 100%;
     height: 93px;
 }
 
-.most-recent__name {
+.most-recent__item-title {
     padding-left: 13px;
     padding-top: 14px;
-    font-family: "Lora";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 21px;
+    font: 400 16px/21px "Lora";
 }
 
-.most-recent__discription {
+.most-recent__item-subtitle {
     padding-left: 13px;
     padding-right: 13px;
     padding-top: 6px;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 19px;
+    font: 400 13px/19px "Oxygen";
     color: rgba(122, 122, 122, 1);
 }
 
-.most-recent__line {
+.most-recent__line{
     width: 100%;
-	border-top: 1px solid rgba(222, 222, 222, 1); 
+    height: 1px;
+	background-color: rgba(222, 222, 222, 1); 
 }
 
 .most-recent__author {
@@ -316,65 +273,39 @@ main .wrapper {
     align-items: center;
 }
 
-.most-recent__image-author {
+.most-recent__author-image {
     position: absolute;
     left: 13px;
     width: 26px;
     height: 26px;
     border-radius: 60px;
-
 }
 
-.most-recent__name-author {
+.most-recent__author-name {
     position: absolute;
     left: 49px;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 35px;
+    font: 400 11px/35px "Oxygen";
     color: rgba(153, 153, 153, 1);
 }
 
-.most-recent__date {
+.most-recent__author-date {
     position: absolute;
     left: 225px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 35px;
+    font: 400 12px/35px "Oxygen";
     color: rgba(153, 153, 153, 1);
 }
 
-footer .wrapper {
+.footer {
     display: flex;
     justify-content: center;
-    align-items: center;
     background: url(../images/Background.jpg) rgba(35, 47, 56, 0.6);
     background-blend-mode: multiply;
-    background-size: 100% 89px ;
-    height: 89px;
-    width: 100%;
+    background-size: cover;
+    padding: 28px 0 27px 0;
 }
 
-footer .block {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;  
-    max-width: 960px;
-    max-height: 34px;
-    padding-bottom: 0px;
-}
-
-footer .block__navigation ul {
-    display: flex;
-
-}
-
-footer .block__navigation ul li a{
-    text-transform: uppercase;
-    padding-right: 20px;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 1px;
-    text-align: right;
+.footer .navigation__link {
+    font: 400 11px/26px "Oxygen";
     color: rgba(255, 255, 255, 0.6);
+    padding: 4px 10px;
 }
