@@ -1,6 +1,6 @@
-<a href="#">
+<a class="most_recent_post_link" href='/post?id=<?= $post['ID'] ?>'>
     <div class="most-recent__item">
-        <img class='most-recent__item-background' src=<?= $post['image'] ?> alt="card-most-recent_image">
+        <img class='most-recent__item-background' src=<?= $post['image_card_url'] ?> alt="card-most-recent_image">
         <div class="most-recent__item-body">
             <h3 class="most-recent__item-title">
                 <?= $post['title'] ?>
@@ -11,12 +11,12 @@
         </div>
         <hr class="most-recent__line">
         <div class="most-recent__author">
-            <img class='most-recent__author-image' src=<?= $post['img_modifier'] ?> alt="author_post">
+            <img class='most-recent__author-image' src=<?= $post['author_url'] ?> alt="author_post">
             <p class="most-recent__author-name">
                 <?= $post['author'] ?>
             </p>
             <p class="most-recent__author-date">
-                <?= $post['data'] ?>
+                <?= date("m/d/Y", $post['publish_date'])?>
             </p>
         </div>
     </div>

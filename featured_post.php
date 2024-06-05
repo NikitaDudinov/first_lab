@@ -1,8 +1,8 @@
-<a href='/post?id=<?= $post['id'] ?>'>
+<a class="featured-posts__link" href='/post?id=<?= $post['ID'] ?>'>
     <div class="featured-posts__item">
-        <img class="featured-posts__item-background" src=<?= $post['image'] ?> alt="card-featured_image-photography">
-        <p class="featured-posts__item-note  <?= $post['note'] ?>">
-            <?= $post['note'] ?>
+        <img class="featured-posts__item-background" src=<?= $post['image_card_url'] ?> alt="card-featured_image-photography">
+        <p class="featured-posts__item-note  adventure">
+           adventure
         </p>
         <h3 class="featured-posts__item-title">
             <?= $post['title'] ?>
@@ -11,12 +11,12 @@
             <?= $post['subtitle'] ?>
         </p>
         <div class="featured-posts__author">
-            <img class="featured-posts__author-image" src=<?= $post['img_modifier'] ?> alt="author_post">
+            <img class="featured-posts__author-image" src=<?= $post['author_url'] ?> alt="author_post">
             <p class="featured-posts__author-name">
                 <?= $post['author'] ?>
             </p>
             <p class="featured-posts__author-date">
-                <?= $post['data'] ?>
+                 <?= date("F d, Y", $post['publish_date'])?>
             </p>
         </div>
     </div>

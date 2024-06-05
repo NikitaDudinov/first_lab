@@ -1,0 +1,150 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #2e2e2e;
+    font-family: "Oxygen", serif;
+}
+
+.main
+{
+    width: 100vw;
+    height: 100vh;
+    background:no-repeat  url('/images/bacground_login.png');
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-description
+{
+    font: 400 17px/25px 'Oxygen';
+    color: white;
+}
+
+.login-page
+{
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-form
+{
+    padding: 56px 40px 0;
+    box-sizing: border-box;
+    max-width: 480px;
+    width: 100%;
+    height: 560px;
+    background-color: white;
+}
+
+.login-form__title
+{
+    font: 400 34px/40px "Lora", serif;  
+    padding-bottom: 10px;
+}
+
+.add_data
+{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+label
+{
+    font: 400 12px/16px 'Oxygen', serif;
+    color: #7A7A7A;
+}
+
+input
+{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    padding: 8px 4px;
+    outline:none;
+}
+
+input:focus
+{
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #2E2E2E
+}
+
+#login-form__submit
+{
+    margin-top: 40px;
+    padding: 12px 24px;
+    background: #DD783F;
+    font: 400 16px/24px 'Oxygen', serif;
+    color: white;
+    border-radius: 3px;
+}
+
+#error-message
+{
+    width: 100%;
+    height: 44px;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FFEBEA;
+    border-left: 2px solid #E86961;
+    border-radius: 5px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+.error-message__title
+{
+    padding-left: 10px;
+    font: 400 14px/20px 'Oxygen', serif;
+    color: #2E2E2E;
+}
+
+#error__email, #error__password
+{
+    padding-top: 5px;
+    font: 400 12px/16px 'Oxygen';
+    color: #E86961;
+    display: none;
+}
+
+input[id="password"]
+{
+    padding-right: 40px;
+}
+
+.enter-password
+{
+    position: relative;
+}
+#show-password
+{
+    position: absolute;
+    right: 10px;
+    top: 8px; 
+}
+@media (min-width: 1024px)
+{
+    .login-page
+    {
+        flex-direction: row;
+    }
+}

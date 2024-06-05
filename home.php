@@ -1,84 +1,36 @@
 <?php
-$featured_posts = [
-    [
-        'id' => 1,
-        'image' => "http://localhost:8001/static/images/index/featered-posts/background1.jpg",
-        'title' => 'The Road Ahead',
-        'subtitle' => 'The road ahead might be paved - it might not be',  
-        'note' => 'photography',
-        'img_modifier' => 'http://localhost:8001/static/images/index/first_author.jpg',
-        'author' => 'Max Vogels',
-        'data' => date("F d, Y", 1443139200),
-        'link' => '#',
-    ],
-    [
-        'id' => 2,
-        'image' => "http://localhost:8001/static/images/index/featered-posts/background2.jpg",
-        'title' => 'From Top Down',
-        'subtitle' => 'Once a year, go someplace you’ve never been before.',
-        'note' => 'adventure',
-        'img_modifier' => 'http://localhost:8001/static/images/index/second_author.jpg',
-        'author' => 'William Wong',
-        'data' => date("F d, Y", 1443139200),
-        'link' => '#'
-    ],
-];
-$most_recent_posts = [
-    [
-        'image' => "http://localhost:8001/static/images/index/most-recent/image1.jpg",
-        'title' => 'Still Standing Tall',
-        'subtitle' => 'Life begins at the end of your comfort zone.',
-        'img_modifier' => 'http://localhost:8001/static/images/index/second_author.jpg',
-        'author' => 'William Wong',
-        'data' => date("m/d/Y", 1443139200),
-    ],
-    [
-        'image' => "http://localhost:8001/static/images/index/most-recent/image2.jpg",
-        'title' => 'Sunny Side Up',
-        'subtitle' => 'No place is ever as bad as they tell you it’s going to be.',
-        'img_modifier' => 'http://localhost:8001/static/images/index/first_author.jpg',
-        'author' => 'Max Vogels',
-        'data' => date("m/d/Y", 1443139200),
-    ],
-    [
-        'image' => "http://localhost:8001/static/images/index/most-recent/image3.jpg",
-        'title' => 'Water Falls',
-        'subtitle' => 'We travel not to escape life, but for life not to escape us.',
-        'img_modifier' => 'http://localhost:8001/static/images/index/first_author.jpg',
-        'author' => 'Max Vogels',
-        'data' => date("m/d/Y", 1443139200),
-    ],
-    [
-        'image' => "http://localhost:8001/static/images/index/most-recent/image4.jpg",
-        'title' => 'Through the Mist',
-        'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
-        'img_modifier' => 'http://localhost:8001/static/images/index/second_author.jpg',
-        'author' => 'William Wong',
-        'data' => date("m/d/Y", 1443139200),
-    ],
-    [
-        'image' => "http://localhost:8001/static/images/index/most-recent/image5.jpg",
-        'title' => 'Awaken Early',
-        'subtitle' => 'Not all those who wander are lost.',
-        'img_modifier' => 'http://localhost:8001/static/images/index/first_author.jpg',
-        'author' => 'Max Vogels',
-        'data' => date("m/d/Y", 1443139200),
-    ],
-    [
-        'image' => "http://localhost:8001/static/images/index/most-recent/image6.jpg",
-        'title' => 'Try it Always',
-        'subtitle' => 'The world is a book, and those who do not travel read only one page.',
-        'img_modifier' => 'http://localhost:8001/static/images/index/first_author.jpg',
-        'author' => 'Max Vogels',
-        'data' => date("m/d/Y", 1443139200),
-    ],
-];
+const HOST = 'localhost';
+const USERNAME = 'root';
+const PASSWORD = '';
+const DATABASE = 'blog';
+function createDBConnection(): mysqli
+{
+    $conn = new mysqli(HOST, USERNAME, PASSWORD, DATABASE);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    return $conn;
+}
+
+function closeDBConnection(mysqli $conn): void
+{
+    $conn->close();
+}
+
+$conn = createDBConnection();
+$sql = "SELECT * FROM post";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $posts = $result->fetch_all(MYSQLI_ASSOC);
+}
+closeDBConnection($conn)
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <script src="burger_menu.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://localhost:8001/static/style/style_index.css">
@@ -87,15 +39,16 @@ $most_recent_posts = [
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <title>Espace.</title>
+    
 </head>
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="logo">
+        <div class="header-container">
+            <a class="logo" href="/home">
                 <img src="http://localhost:8001/static/images/Escape_end.svg" alt="Escape.">
-            </div>
-            <nav class="navigation">
+            </a>
+            <nav class="navigation-header">
                 <ul class="navigaton__list">
                     <li class="navigation__item">
                         <a class="navigation__link" href="#">home</a>
@@ -111,6 +64,23 @@ $most_recent_posts = [
                     </li>
                 </ul>
             </nav>
+            <img id="burger_menu" src="../images/index/burger_image.png" alt="burger_image">
+            <div id="burger__navigation">
+                <ul class="burger__list">
+                    <li class="burger__item">
+                        <a class="burger__item__link" href="#">home</a>
+                    </li>
+                    <li class="burger__item">
+                        <a class="burger__item__link" href="#">categories</a>
+                    </li>
+                    <li class="burger__item">
+                        <a class="burger__item__link" href="#">about</a>
+                    </li>
+                    <li class="burger__item">
+                        <a class="burger__item__link" href="#">contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <h1 class="header__title">
             Let's do it together.
@@ -150,10 +120,12 @@ $most_recent_posts = [
         <div class="featured-posts">
             <h2 class="featured-posts__title">Featured Posts</h2>
             <hr class="line">
-            <nav class="list-posts">
+            <nav class="featured-list-posts">
                 <?php
-                foreach ($featured_posts as $post) {
-                    include 'featured_post.php';
+                foreach ($posts as $post) {
+                    if ($post['featured'] == 1) {
+                        include 'featured_post.php';
+                    }
                 }
                 ?>
             </nav>
@@ -163,36 +135,49 @@ $most_recent_posts = [
             <hr class="line">
             <nav class="list-posts">
                 <?php
-                foreach ($most_recent_posts as $post) {
-                    include 'most_recent_post.php';
+                foreach ($posts as $post) {
+                    if ($post['featured'] != 1) {
+                        include 'most_recent_post.php';
+                    }
                 }
                 ?>
             </nav>
         </div>
     </main>
     <footer class="footer">
-        <div class="container">
-            <div class="logo">
-                <img src="http://localhost:8001/static/images/Escape_end.svg" alt="Escape.">
+        <div class="footer-title-container">
+            <h2 class="footer__title">Stay in Touch</h2>
+            <hr class="footer__line">
+        </div>
+        <form class="post_email" action="POST">
+            <input class="post_email_input" type="text" name="email" id="email" placeholder="Enter your email address"/>
+            <button class="post_email_button" type="submit">
+                Submit
+            </button>
+        </form>
+        <div class="container-footer">
+            <div class="container">
+                <div class="logo">
+                    <img src="http://localhost:8001/static/images/Escape_end.svg" alt="Escape.">
+                </div>
+                <nav class="navigation">
+                    <ul class="navigaton__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">home</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">categories</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">about</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="navigation">
-                <ul class="navigaton__list">
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#">home</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#">categories</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#">about</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#">contact</a>
-                    </li>
-                </ul>
-            </nav>
         </div>
     </footer>
 </body>
-
 </html>

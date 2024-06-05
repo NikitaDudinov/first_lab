@@ -6,11 +6,11 @@
         <?= $post['subtitle'] ?>
     </div>
 </div>
-<img class="image" src=<?= $post['image']?> alt="Northern lights">
+<img class="image" src=<?= $post['image_url']?> alt="Northern lights">
 <div class="wrapper">
     <div class="article">
         <p class="article_text">
-            <?= $post['text'] ?>
+            <?= $post['content'] ?>
         </p>
     </div>
 </div>
