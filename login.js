@@ -1,3 +1,4 @@
+    
 document.addEventListener("DOMContentLoaded", (event) => {
     let Button = document.getElementById('login-form__submit');
     let Password = document.getElementById('password');
@@ -33,26 +34,41 @@ document.addEventListener("DOMContentLoaded", (event) => {
               }
         }
         if(!(CorrectEmail && CorrectPassword)){
-            ErrorMessage.style.display = "flex"
+            ErrorMessage.classList.remove("hidden");
+            document.getElementById('error-message__img').classList.remove("hidden");
+            document.getElementById('error-message__title').classList.remove("hidden");
         }else{
-            ErrorMessage.style.display = "none" 
+            ErrorMessage.classList.add("hidden");
+            document.getElementById('error-message__img').classList.add("hidden");
+            document.getElementById('error-message__title').classList.add("hidden");
         }
         if(CorrectEmail && CorrectPassword){
-            fetch("/login", {
+            fetch("api/login", {
 			method: "POST",
 			body: JSON.stringify({
-				password: Password.value,
+				password: md5(Password.value),
 				email: Email.value,
 			}),
 			headers: {
 				"Content-type": "application/json; charset=UTF-8"
 			}
 		})
-			.then((response) => response.json())
-			.then((json) => console.log(json));
-            if(json = '200'){
-                window.location.replace("/admin");
-            }
+            .then(response => response.text())
+			.then(responseText => {
+                if(responseText == '200'){
+                    window.location.replace("/admin");
+                }
+                else
+                {
+                    ErrorPassword.innerHTML = 'Email is not valid. Please, enter correct one.';
+                    ErrorPassword.style.display = 'block';
+                    ErrorEmail.innerHTML = 'Email is not valid. Please, enter correct one.';
+                    ErrorEmail.style.display = 'block'; 
+                    ErrorMessage.classList.remove("hidden");
+                    document.getElementById('error-message__img').classList.remove("hidden");
+                    document.getElementById('error-message__title').classList.remove("hidden");
+                }
+            });
         }
         
 

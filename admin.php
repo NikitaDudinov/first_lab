@@ -1,3 +1,15 @@
+<?php
+session_name('auth');
+session_start();
+$userId = $_SESSION['user_id'] ?? null;
+$userName = $_SESSION['email'];
+$color = $_SESSION['color'];
+if ($userId === null){
+    header("Location: /home");
+    die();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +31,10 @@
             <img class="header__logo" src=".\images\admin\Logo.svg" alt="">
         </a>
         <div class="header__account">
-            <img class="header__account_image" src=".\images\admin\Avatar.png" alt="">
-            <a class="header__account_exit" href="">
+            <div class="header__account_image-wrapper" style="background: <?=$color?>">
+                 <p class="header__account_image"><?=$userName[0]?></p>
+            </div>
+            <a class="header__account_exit" href="api/logout">
                 <img class="header__account_exit-icon" src=".\images\admin\exit.png" alt="">
             </a>
         </div>

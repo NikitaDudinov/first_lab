@@ -527,3 +527,20 @@ textarea
     background-color: #E6FCEF;
     display: none;
 }
+
+.header__account_image-wrapper
+{
+    gap: 10px;
+    border-radius: 20px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__account_image{
+    text-transform: uppercase;
+    color: white;
+    font: 400 16px/24px 'Oxygen';
+}
