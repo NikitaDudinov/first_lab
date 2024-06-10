@@ -12,26 +12,26 @@ if ($method != "POST")
 else 
 {
   $conn = createDBConnection();
-  $dataAsJson = File_Get_Contents("php://input");
-  $dataAsArray = json_decode($dataAsJson, true);
-  $email = $dataAsArray['email'];
-  $password = (string) $dataAsArray['password'];
-  $password = (md5($password  . $salt));   
-  $sql = "SELECT * FROM user WHERE email = '$email'";
-  $result = $conn->query($sql);
-  $user = $result->fetch_assoc();
-  if($user !==null && $user['password'] == $password){   
-      $session_name = 'auth';
-      session_name($session_name);
-      session_start();  
-      $_SESSION['user_id'] = $user['user_id'];
-      $_SESSION['email'] = $user['email'];
-      $_SESSION['color'] = rand_color();
-      echo('200');
-  }
-  else{
-      echo('401');
-  }
+    $dataAsJson = File_Get_Contents("php://input");
+    $dataAsArray = json_decode($dataAsJson, true);
+    $email = $dataAsArray['email'];
+    $password = (string) $dataAsArray['password'];
+    $password = (md5($password  . $salt));   
+    $sql = "SELECT * FROM user WHERE email = '$email'";
+    $result = $conn->query($sql);
+    $user = $result->fetch_assoc();
+    if($user !==null && $user['password'] == $password){   
+        $session_name = 'auth';
+        session_name($session_name);
+        session_start();  
+        $_SESSION['user_id'] = $user['user_id'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['color'] = rand_color();
+        echo('200');
+    }
+    else{
+        echo('401');
+    }
 }
 function rand_color() {
   return '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);

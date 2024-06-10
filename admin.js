@@ -13,9 +13,21 @@ let UploadHeroMinImage = document.getElementById('upload_Hero_min')
 let DeleteHeroMinImage = document.getElementById('delete_Hero_min')
 let AddPost = document.getElementById('add-post__button')
 let PostContent = document.getElementById('post_content')
+let ExitAccount = document.getElementById('header__account_exit')
 let HeroImageBase64
 let HeroImageMinBase64
 let AuthorPhotoBase64
+
+
+ExitAccount.addEventListener('click', (e) => {
+	fetch("api/logout", { method: "POST" })
+		.then(response => response.text())
+		.then(responseText => {
+			if(responseText === '200'){
+				window.location.replace("/home");
+			}
+		})
+	});
 
 AddPost.addEventListener('click', (e) => {
 	e.preventDefault()
@@ -215,9 +227,9 @@ UpdateAuthorImage.addEventListener('change', (e) => {
 
 
 TitlePost.addEventListener('keyup', (e) => {
-	if(TitlePost.value != ''){
+	if (TitlePost.value != '') {
 		TitlePost.style = "background-color: #F7F7F7"
-	}else{
+	} else {
 		TitlePost.style = "background-color: #ffffff"
 	}
 	document.getElementById('card-view__title').innerHTML = TitlePost.value
@@ -225,27 +237,27 @@ TitlePost.addEventListener('keyup', (e) => {
 })
 
 NameAuthor.addEventListener('keyup', (e) => {
-	if(NameAuthor.value != ''){
+	if (NameAuthor.value != '') {
 		NameAuthor.style = "background-color: #F7F7F7"
-	}else{
+	} else {
 		NameAuthor.style = "background-color: #ffffff"
 	}
 	document.getElementById('card_author_name').innerHTML = NameAuthor.value
 })
 
 ShortDescription.addEventListener('keyup', (e) => {
-	if(ShortDescription.value != ''){
+	if (ShortDescription.value != '') {
 		ShortDescription.style = "background-color: #F7F7F7"
-	}else{
+	} else {
 		ShortDescription.style = "background-color: #ffffff"
 	}
 	document.getElementById('card-view__subtitle').innerHTML = ShortDescription.value
 	document.getElementById('post-view__subtitle').innerHTML = ShortDescription.value
 })
 DatePublish.addEventListener('change', (e) => {
-	if(DatePublish.value != ''){
+	if (DatePublish.value != '') {
 		DatePublish.style = "background-color: #F7F7F7"
-	}else{
+	} else {
 		DatePublish.style = "background-color: #ffffff"
 	}
 	document.getElementById('publish_date-card').innerHTML = new Date(DatePublish.value).toLocaleDateString('en-GB')

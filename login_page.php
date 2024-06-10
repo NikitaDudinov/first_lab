@@ -42,7 +42,7 @@ if ($userId !== null){
                             <label for="password" class="input-label">Password</label>
                             <div class="enter-password">
                                 <input type="password" id="password" name="password"/>
-                                <img id="show-password" src="./images/login_page/eye.svg" alt="show password">
+                                <img id="show-password" src="./images/login_page/eye-off.png" alt="show password">
                             </div>         
                             <p  id="error__password"></p>
                         </div>

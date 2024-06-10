@@ -1,7 +1,8 @@
 <?php
     session_name('auth');
     session_start();
-    $_SESSION = [];
-    session_destroy();
-    header("Location: /home");
-    die();
+    if(isset($_SESSION['user_id'])){
+        $_SESSION = [];
+        session_destroy();
+        echo('200');
+    }

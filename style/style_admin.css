@@ -36,7 +36,7 @@
     align-items: center;
 }
 
-.header__account_exit
+#header__account_exit
 {
     padding: 6px 8px;
 }

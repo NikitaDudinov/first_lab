@@ -77,8 +77,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     ShowPassword.addEventListener('click', (e)=>{
         if(Password.type == 'password'){
             Password.type = 'text';
+            ShowPassword.src = "./images/login_page/eye.svg"
+
         }else{
             Password.type = 'password';
+            ShowPassword.src = "./images/login_page/eye-off.png"
         }
     });
     function ValidMail(myMail) {

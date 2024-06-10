@@ -1,14 +1,24 @@
 <?php
-session_name('auth');
-session_start();
-$userId = $_SESSION['user_id'] ?? null;
-$userName = $_SESSION['email'];
-$color = $_SESSION['color'];
-if ($userId === null){
-    header("Location: /home");
-    die();
+function authByCookie(): bool
+{
+    session_name('auth');
+    session_start();
+    if(isset($_SESSION['user_id'])){
+        return true;
+    }
+    return false;
 }
 
+  if(authByCookie()){
+    $userId = $_SESSION['user_id'];
+    $userName = $_SESSION['email'];
+    $color = $_SESSION['color'];
+  }
+  else
+  {
+    header("Location: /home");
+    die();
+  } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,9 +44,9 @@ if ($userId === null){
             <div class="header__account_image-wrapper" style="background: <?=$color?>">
                  <p class="header__account_image"><?=$userName[0]?></p>
             </div>
-            <a class="header__account_exit" href="api/logout">
+            <p id="header__account_exit">
                 <img class="header__account_exit-icon" src=".\images\admin\exit.png" alt="">
-            </a>
+            </p>
         </div>
     </div>
 </header>
